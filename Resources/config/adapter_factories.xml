@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
         <service id="knp_gaufrette.adapter.factory.in_memory" class="Knp\Bundle\GaufretteBundle\DependencyInjection\Factory\InMemoryAdapterFactory">
@@ -21,6 +21,9 @@
             <tag name="gaufrette.adapter.factory" />
         </service>
         <service id="knp_gaufrette.adapter.factory.acl_aware_amazon_s3" class="Knp\Bundle\GaufretteBundle\DependencyInjection\Factory\AclAwareAmazonS3AdapterFactory">
+            <tag name="gaufrette.adapter.factory" />
+        </service>
+        <service id="knp_gaufrette.adapter.factory.rackspace_cf" class="Knp\Bundle\GaufretteBundle\DependencyInjection\Factory\RackspaceCfAdapterFactory">
             <tag name="gaufrette.adapter.factory" />
         </service>
         <service id="knp_gaufrette.adapter.factory.gridfs" class="Knp\Bundle\GaufretteBundle\DependencyInjection\Factory\GridFSAdapterFactory">
